@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Giuseppe"
+  given-names: "Colavito"
+- family-names: "Filippo"
+  given-names: "Lanubile"
+  orcid: "https://orcid.org/0000-0003-3373-7589"
+- family-names: "Nicole"
+  given-names: "Novielli"
+  orcid: "https://orcid.org/0000-0003-1160-2608"
+title: "Issue-Report-Classification-Using-RoBERTa"
+version: 1.0.0
+date-released: 2022-03-09
+url: "https://github.com/collab-uniba/Issue-Report-Classification-Using-RoBERTa"
