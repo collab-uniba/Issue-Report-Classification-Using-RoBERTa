@@ -23,3 +23,14 @@ If you use the software in this repository please consider citing our paper as f
 software maintenance and evolution},
 }
 ```
+
+## Comparison with CodeBERT
+As show in the table, the two models are equivalent. For CodeBERT, we removed the preprocessing to keep all the code, since it is trained on code also. Note that also removing the code, the performances are lower, but remain similar to RoBERTa 
+|           | CodeBERT | RoBERTa | CodeBERT | RoBERTa | CodeBERT | RoBERTa |         |
+|-----------|----------|---------|----------|---------|----------|---------|---------|
+|           | precision | precision | recall | recall | f1-score | f1-score | support |
+| bug       | 0.8729   | 0.8750  | 0.8997   | 0.8988  | 0.8861   | 0.8867  | 40122   |
+| enhancement | 0.8729   | 0.8713  | 0.8716   | 0.8743  | 0.8722   | 0.8728  | 33073   |
+| question  | 0.6664   | 0.6760  | 0.5528   | 0.5591  | 0.6043   | 0.6120  | 6943    |
+| micro avg | 0.8580   | 0.8591  | 0.8580   | 0.8591  | 0.8580   | 0.8591  | 80138   |
+| macro avg | 0.8041   | 0.8074  | 0.7747   | 0.7774  | 0.7875   | 0.7905  | 80138   |
