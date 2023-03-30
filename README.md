@@ -34,3 +34,28 @@ As show in the table, the two models are equivalent. For CodeBERT, we removed th
 | question  | 0.6664   | 0.6760  | 0.5528   | 0.5591  | 0.6043   | 0.6120  | 6943    |
 | micro avg | 0.8580   | 0.8591  | 0.8580   | 0.8591  | 0.8580   | 0.8591  | 80138   |
 | macro avg | 0.8041   | 0.8074  | 0.7747   | 0.7774  | 0.7875   | 0.7905  | 80138   |
+
+
+## Combination of the filters
+The filters combined are the following:
+- The project must have an age of more than 4 year
+- The project must have more than 1500 stars
+- The issue should have a single label (and should still be available) on GitHub
+
+Results are compared with a model trained on a random sampling of the training set, tested on the filtered test set
+
+| RANDOM SAMPLING | Precision | Recall | F1-score | Support |
+|-----------------|-----------|--------|----------|---------|
+| bug             | 0.8935    | 0.7937 | 0.8407   | 2094    |
+| enhancement     | 0.8496    | 0.7569 | 0.8005   | 1164    |
+| question        | 0.5140    | 0.8233 | 0.6329   | 600     |
+| microavg        | 0.7872    | 0.7872 | 0.7872   | 3858    |
+| macroavg        | 0.7524    | 0.7913 | 0.7580   | 3858    |
+
+| FILTERED        | Precision | Recall | F1-score | Support |
+|-----------------|-----------|--------|----------|---------|
+| bug             | 0.9032    | 0.7751 | 0.8342   | 2094    |
+| enhancement     | 0.7763    | 0.8290 | 0.8018   | 1164    |
+| question        | 0.5587    | 0.7617 | 0.6446   | 600     |
+| microavg        | 0.7893    | 0.7893 | 0.7893   | 3858    |
+| macroavg        | 0.7461    | 0.7886 | 0.7602   | 3858    |
